@@ -1,20 +1,17 @@
-apply plugin: 'com.android.application'
-
-android {
-    compileSdkVersion 34
-    defaultConfig {
-        applicationId "com.ul.store"
-        minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 1
-        versionName "1.0"
+// ul.store/build.gradle
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
